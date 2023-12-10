@@ -40,6 +40,58 @@
         <link href="css/style.css" rel="stylesheet" />
         <!-- responsive style -->
         <link href="css/responsive.css" rel="stylesheet" />
+        <!-- Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get the context of the canvas element
+                var ctx = document.getElementById("logisticsChart").getContext("2d");
+        
+                // Data for the chart (replace this with your actual data)
+                var data = {
+                    labels: ["Havayolu", "Denizyolu", "Karayolu", "Demiryolu"],
+                    datasets: [
+                        {
+                            label: "Tercih edilen taşıma türleri",
+                            data: [50, 30, 20, 40], // Replace with your data values
+                            backgroundColor: [
+                                "rgba(255, 99, 132, 0.2)",
+                                "rgba(54, 162, 235, 0.2)",
+                                "rgba(255, 206, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)",
+                            ],
+                            borderColor: [
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(54, 162, 235, 1)",
+                                "rgba(255, 206, 86, 1)",
+                                "rgba(75, 192, 192, 1)",
+                            ],
+                            borderWidth: 1,
+                        },
+                    ],
+                };
+        
+                // Chart configuration
+                var options = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                };
+        
+                // Create the chart
+                var logisticsChart = new Chart(ctx, {
+                    type: "bar", // You can change the chart type here (bar, line, pie, etc.)
+                    data: data,
+                    options: options,
+                });
+            });
+        </script>
+        
     </head>
 
     <body>
@@ -551,6 +603,21 @@
         
         <!-- end client section -->
 
+    <!-- Logistics Statistics Section -->
+    <section class="logistics_statistics_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>Müşterilerimizin tercihleri</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="logisticsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Logistics Statistics Section -->
         <!-- contact section -->
         <section class="contact_section">
             <div class="container-fluid">
