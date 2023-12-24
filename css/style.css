@@ -6,28 +6,37 @@ body {
     overflow-x: hidden;
 }
 
-.layout_padding {
-    padding: 90px 0;
+
+/* Default styles for larger screens */
+/* Default styles for larger screens */
+.slider_section {
+    background-color: #ffffff;
+    position: relative;
+    padding-bottom: 7rem;
 }
 
-.layout_padding2 {
-    padding: 75px 0;
+.slider_section .carousel-indicators {
+    position: absolute !important;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
-.layout_padding2-top {
-    padding-top: 75px;
+.carousel-item {
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 85vh;
 }
 
-.layout_padding2-bottom {
-    padding-bottom: 75px;
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.layout_padding-top {
-    padding-top: 90px;
-}
-
-.layout_padding-bottom {
-    padding-bottom: 90px;
+.carousel-inner {
+    background-color: transparent;
 }
 
 .heading_container {
@@ -339,6 +348,8 @@ a:focus {
 
 .row{
     font-size: small;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider_section .row {
@@ -440,6 +451,7 @@ a:focus {
 
 .service_section {
     position: relative;
+    margin-bottom: 40px;
 }
 
 .service_section .box {
@@ -554,9 +566,6 @@ a:focus {
 .track_section {
     position: relative;
     color: #ffffff;
-}
-.track_bg_box img{
-
 }
 
 
@@ -986,7 +995,78 @@ a:focus {
     background-color: #065968;
 }
 
+.wpb_column vc_column_container vc_col-sm-6
+{
+    flex: 1 0 100%; /* Set flex-basis to 100% to make it full width */
+    margin-right: 20px; /* Remove the right margin */
+}
 
+.vc_single_image-wrapper img
+{
+    width: 80%;
+    object-fit: cover;
+}
+/* Duyuru Section Styles */
+.announcement_section {
+    background-color: #f8f9fa; /* Background color for the section */
+    padding: 50px 0; /* Adjust padding for spacing */
+}
+
+.heading_container h2{
+    margin-bottom: 20px;
+}
+
+.heading_container h2 a{
+    color: #0a97b0; 
+}
+
+.heading_container h2 a:hover{
+    color: #065968; 
+}
+
+.announcement_item {
+    background-color: #ffffff; /* Background color for each announcement item */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.announcement_item:hover {
+    transform: scale(1.02); /* Scale up on hover for a subtle effect */
+}
+
+.announcement_item h3 a {
+    color: #0a97b0; 
+}
+
+.announcement_item p {
+    color: #6c757d; /* Text color for announcement content */
+}
+
+.about_section {
+    padding-bottom: 90px;
+}
+
+.track_section {
+    padding: 90px 0;
+    margin-bottom: 90px;
+}
+
+.client_section {
+    margin-bottom: 90px;
+}
+
+.contact_section {
+    margin-bottom: 90px;
+}
+
+.logistics_statistics_section {
+    margin-bottom: 90px;
+}
+
+.contact_section {
+    margin-bottom: 90px;
+}
 
 /* footer section*/
 .footer_section {
@@ -1005,4 +1085,3 @@ a:focus {
     color: inherit;
 }
 
-/*# sourceMappingURL=style.css.map */
